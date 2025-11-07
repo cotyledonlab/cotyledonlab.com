@@ -1,5 +1,9 @@
 ---
 // Contact form component
+
+// Configuration constants
+const FORM_SUBMIT_DELAY_MS = 1000; // Simulated API call delay
+const SUCCESS_MESSAGE_DURATION_MS = 5000; // How long to show success message
 ---
 
 <section id="contact" class="bg-white py-24">
@@ -72,10 +76,10 @@
   </div>
 </section>
 
-<script>
+<script define:vars={{ FORM_SUBMIT_DELAY_MS, SUCCESS_MESSAGE_DURATION_MS }} is:inline>
   // Placeholder API - client-side form handling
-  const form = document.getElementById('contact-form') as HTMLFormElement;
-  const messageDiv = document.getElementById('form-message') as HTMLDivElement;
+  const form = document.getElementById('contact-form');
+  const messageDiv = document.getElementById('form-message');
   
   form?.addEventListener('submit', async (e) => {
     e.preventDefault();
@@ -86,7 +90,7 @@
     // Placeholder API call - replace with actual endpoint
     try {
       // Simulate API call
-      await new Promise((resolve) => setTimeout(resolve, 1000));
+      await new Promise((resolve) => setTimeout(resolve, FORM_SUBMIT_DELAY_MS));
       
       // In production, replace this with:
       // const response = await fetch('/api/contact', {
@@ -105,7 +109,7 @@
       
       setTimeout(() => {
         messageDiv.classList.add('hidden');
-      }, 5000);
+      }, SUCCESS_MESSAGE_DURATION_MS);
     } catch (error) {
       console.error('Form submission error:', error);
       

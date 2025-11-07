@@ -1,6 +1,13 @@
 ---
 import { SITE_CONFIG } from '../config';
 
+/**
+ * Props for the BaseLayout component
+ * @property {string} [title] - Page title. Will be appended with site title if different
+ * @property {string} [description] - Page meta description for SEO
+ * @property {string} [image] - Social sharing image path (relative to site root, e.g., '/image.jpg')
+ * @property {string} [keywords] - Comma-separated keywords for SEO
+ */
 export interface Props {
   title?: string;
   description?: string;
