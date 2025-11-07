@@ -1,0 +1,22 @@
+# Dependencies
+node_modules/
+
+# Build output
+dist/
+.astro/
+
+# Environment variables
+.env
+.env.production
+
+# macOS-specific files
+.DS_Store
+
+# Editor directories
+.vscode/
+.idea/
+
+# Logs
+logs
+*.log
+npm-debug.log*

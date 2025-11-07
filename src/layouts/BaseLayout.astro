@@ -1,0 +1,66 @@
+---
+import { SITE_CONFIG } from '../config';
+
+/**
+ * Props for the BaseLayout component
+ * @property {string} [title] - Page title. Will be appended with site title if different
+ * @property {string} [description] - Page meta description for SEO
+ * @property {string} [image] - Social sharing image path (relative to site root, e.g., '/image.jpg')
+ * @property {string} [keywords] - Comma-separated keywords for SEO
+ */
+export interface Props {
+  title?: string;
+  description?: string;
+  image?: string;
+  keywords?: string;
+}
+
+const {
+  title = SITE_CONFIG.title,
+  description = SITE_CONFIG.description,
+  image = SITE_CONFIG.image,
+  keywords = SITE_CONFIG.keywords,
+} = Astro.props;
+
+const pageTitle = title === SITE_CONFIG.title ? title : `${title} | ${SITE_CONFIG.title}`;
+const canonicalURL = new URL(Astro.url.pathname, SITE_CONFIG.url);
+const socialImage = new URL(image, SITE_CONFIG.url);
+---
+
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="generator" content={Astro.generator} />
+    
+    <!-- Primary Meta Tags -->
+    <title>{pageTitle}</title>
+    <meta name="title" content={pageTitle} />
+    <meta name="description" content={description} />
+    <meta name="keywords" content={keywords} />
+    <meta name="author" content={SITE_CONFIG.author} />
+    <link rel="canonical" href={canonicalURL} />
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content={canonicalURL} />
+    <meta property="og:title" content={pageTitle} />
+    <meta property="og:description" content={description} />
+    <meta property="og:image" content={socialImage} />
+    
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image" />
+    <meta property="twitter:url" content={canonicalURL} />
+    <meta property="twitter:title" content={pageTitle} />
+    <meta property="twitter:description" content={description} />
+    <meta property="twitter:image" content={socialImage} />
+    <meta name="twitter:site" content={SITE_CONFIG.twitter} />
+  </head>
+  <body class="antialiased">
+    <slot />
+  </body>
+</html>
