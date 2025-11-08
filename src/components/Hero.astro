@@ -2,46 +2,83 @@
 import { SITE_CONFIG } from '../config';
 ---
 
-<section class="relative bg-gradient-to-br from-blue-600 via-blue-700 to-blue-900 text-white">
-  <div class="mx-auto max-w-7xl px-4 py-24 sm:px-6 lg:px-8 lg:py-32">
-    <div class="text-center">
-      <h1 class="text-4xl font-extrabold tracking-tight sm:text-5xl md:text-6xl">
-        <span class="block">Welcome to</span>
-        <span class="block text-blue-200">{SITE_CONFIG.title}</span>
+<section class="relative overflow-hidden bg-slate-950 text-white">
+  <div class="absolute inset-0">
+    <div class="absolute inset-y-0 left-1/2 h-[800px] w-[800px] -translate-x-1/2 rounded-full bg-blue-500/30 blur-[180px]"></div>
+    <div class="absolute inset-0 bg-[radial-gradient(circle_at_top,_rgba(14,165,233,0.25),_transparent_55%)]"></div>
+  </div>
+  <div class="relative mx-auto flex max-w-7xl flex-col gap-16 px-6 py-24 sm:px-8 lg:flex-row lg:items-center lg:py-32">
+    <div class="max-w-3xl space-y-8 text-center lg:text-left">
+      <span class="inline-flex items-center gap-2 rounded-full border border-white/20 px-4 py-1 text-sm uppercase tracking-[0.2em] text-white/70">
+        Product Studio · App Development
+      </span>
+      <h1 class="text-4xl font-semibold leading-tight sm:text-5xl lg:text-6xl">
+        We design, build, and launch flagship products for ambitious teams.
       </h1>
-      <p class="mx-auto mt-6 max-w-2xl text-xl text-blue-100">
-        {SITE_CONFIG.description}
+      <p class="text-lg text-white/80 md:text-xl">
+        {SITE_CONFIG.title} is an app development company crafting bespoke web and mobile experiences. We pair strategy, design, and full-stack engineering to ship polished software fast.
       </p>
-      <div class="mt-10 flex justify-center gap-4">
+      <div class="flex flex-col items-center gap-4 sm:flex-row lg:justify-start">
         <a
           href="#contact"
-          class="rounded-lg bg-white px-8 py-3 text-base font-semibold text-blue-700 shadow-lg transition hover:bg-blue-50 focus:outline-none focus:ring-2 focus:ring-white focus:ring-offset-2 focus:ring-offset-blue-700"
+          class="inline-flex min-w-[180px] items-center justify-center rounded-2xl bg-white px-8 py-3 text-base font-semibold text-slate-950 shadow-xl shadow-blue-500/30 transition hover:-translate-y-0.5 hover:bg-slate-100"
         >
-          Get Started
+          Book a Build Sprint
         </a>
         <a
-          href="#features"
-          class="rounded-lg border-2 border-white px-8 py-3 text-base font-semibold text-white transition hover:bg-white hover:text-blue-700 focus:outline-none focus:ring-2 focus:ring-white focus:ring-offset-2 focus:ring-offset-blue-700"
+          href="#showcase"
+          class="inline-flex items-center gap-2 text-base font-semibold text-white/80 transition hover:text-white"
         >
-          Learn More
-        </a>
-        <a
-          href="/demos/meal-planner"
-          class="rounded-lg bg-blue-500/20 px-8 py-3 text-base font-semibold text-white shadow-inner transition hover:bg-blue-500/30 focus:outline-none focus:ring-2 focus:ring-white focus:ring-offset-2 focus:ring-offset-blue-700"
-        >
-          View Meal Planner Demo
+          View demo showcase
+          <span aria-hidden="true">↗</span>
         </a>
       </div>
+      <dl class="grid grid-cols-2 gap-6 border-t border-white/10 pt-6 text-left sm:grid-cols-3">
+        <div>
+          <dt class="text-sm uppercase tracking-[0.25em] text-white/50">Products launched</dt>
+          <dd class="text-3xl font-semibold text-white">35+</dd>
+        </div>
+        <div>
+          <dt class="text-sm uppercase tracking-[0.25em] text-white/50">Average timelines</dt>
+          <dd class="text-3xl font-semibold text-white">6 wks</dd>
+        </div>
+        <div>
+          <dt class="text-sm uppercase tracking-[0.25em] text-white/50">Industries</dt>
+          <dd class="text-3xl font-semibold text-white">Fintech · Health · AI</dd>
+        </div>
+      </dl>
     </div>
-  </div>
-  <div class="absolute inset-0 overflow-hidden opacity-10">
-    <svg class="absolute h-full w-full" xmlns="http://www.w3.org/2000/svg">
-      <defs>
-        <pattern id="hero-pattern" x="0" y="0" width="40" height="40" patternUnits="userSpaceOnUse">
-          <circle cx="20" cy="20" r="1" fill="currentColor" />
-        </pattern>
-      </defs>
-      <rect x="0" y="0" width="100%" height="100%" fill="url(#hero-pattern)" />
-    </svg>
+    <div class="w-full max-w-xl rounded-[32px] border border-white/10 bg-white/5 p-8 backdrop-blur">
+      <div class="space-y-6">
+        <p class="text-sm uppercase tracking-[0.4em] text-white/60">Inside the lab</p>
+        <div class="rounded-3xl bg-white/90 p-6 text-slate-900 shadow-2xl ring-1 ring-black/5">
+          <p class="text-xs uppercase tracking-[0.5em] text-slate-500">Current experiments</p>
+          <ul class="mt-4 space-y-4 text-base text-slate-700">
+            <li class="flex items-start gap-3">
+              <span class="mt-1 h-2 w-2 rounded-full bg-blue-500"></span>
+              AI-powered meal planning companion for nutrition teams.
+            </li>
+            <li class="flex items-start gap-3">
+              <span class="mt-1 h-2 w-2 rounded-full bg-emerald-500"></span>
+              Investor reporting dashboard for a multi-family office.
+            </li>
+            <li class="flex items-start gap-3">
+              <span class="mt-1 h-2 w-2 rounded-full bg-purple-500"></span>
+              Field technician app syncing offline diagnostics.
+            </li>
+          </ul>
+          <a
+            href="/demos/meal-planner"
+            class="mt-6 inline-flex items-center justify-between rounded-2xl border border-slate-200 px-4 py-3 text-sm font-semibold text-slate-900 transition hover:bg-slate-50"
+          >
+            Try the meal planner demo
+            <span aria-hidden="true">→</span>
+          </a>
+        </div>
+        <div class="rounded-3xl border border-white/20 p-4 text-sm text-white/80">
+          Full-stack team spanning product strategy, UX, frontend, backend, and cloud. Plug us in as your launch partner or an extension of your engineering org.
+        </div>
+      </div>
+    </div>
   </div>
 </section>

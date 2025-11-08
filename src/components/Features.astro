@@ -1,55 +1,56 @@
 ---
 const features = [
   {
-    title: 'Fast Performance',
-    description: 'Lightning-fast load times with optimized static site generation and modern web technologies.',
-    icon: '⚡',
+    title: 'Product Strategy Sprints',
+    description: 'Validate ideas quickly with rapid prototyping, scope definition, and GTM planning.',
+    icon: '🧭',
   },
   {
-    title: 'Responsive Design',
-    description: 'Beautiful, mobile-first design that looks great on any device, from phones to desktops.',
-    icon: '📱',
+    title: 'UI/UX Systems',
+    description: 'Design languages, interaction patterns, and motion systems tailored to your brand.',
+    icon: '🎨',
   },
   {
-    title: 'SEO Optimized',
-    description: 'Built-in SEO best practices to help your business rank higher in search results.',
-    icon: '🎯',
+    title: 'Full-Stack Engineering',
+    description: 'Typescript, React Native, and cloud-native APIs built for performance and reliability.',
+    icon: '🛠️',
   },
   {
-    title: 'Secure & Reliable',
-    description: 'Enterprise-grade security and 99.9% uptime to keep your business running smoothly.',
-    icon: '🔒',
+    title: 'AI-Driven Experiences',
+    description: 'Integrations with OpenAI, Pinecone, and custom LLM workflows to unlock intelligent features.',
+    icon: '🤖',
   },
   {
-    title: 'Easy to Scale',
-    description: 'Grow your business without worrying about infrastructure. We scale with you.',
-    icon: '📈',
+    title: 'DevOps & Cloud',
+    description: 'CI/CD automation, infrastructure-as-code, and observability baked into every build.',
+    icon: '☁️',
   },
   {
-    title: '24/7 Support',
-    description: 'Round-the-clock customer support to help you whenever you need assistance.',
-    icon: '💬',
+    title: 'Launch & Growth Support',
+    description: 'Beta coordination, analytics instrumentation, and iteration loops post-launch.',
+    icon: '🚀',
   },
 ];
 ---
 
-<section id="features" class="bg-gray-50 py-24">
-  <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+<section id="features" class="bg-gradient-to-b from-white to-slate-50 py-24">
+  <div class="mx-auto max-w-6xl px-6 lg:px-8">
     <div class="text-center">
-      <h2 class="text-3xl font-extrabold text-gray-900 sm:text-4xl">
-        Why Choose Us
-      </h2>
-      <p class="mt-4 text-xl text-gray-600">
-        Everything you need to succeed in the digital world
+      <p class="text-sm font-semibold uppercase tracking-[0.4em] text-slate-400">Services</p>
+      <h2 class="mt-4 text-4xl font-semibold text-slate-900 sm:text-5xl">End-to-end product teams on tap</h2>
+      <p class="mx-auto mt-6 max-w-2xl text-lg text-slate-600">
+        We plug into your roadmap, own outcomes, and ship delightful software on a predictable cadence.
       </p>
     </div>
-    
-    <div class="mt-20 grid gap-8 sm:grid-cols-2 lg:grid-cols-3">
+
+    <div class="mt-16 grid gap-8 sm:grid-cols-2">
       {features.map((feature) => (
-        <div class="relative rounded-2xl bg-white p-8 shadow-lg transition hover:shadow-xl">
-          <div class="text-5xl mb-4" role="img" aria-label={feature.title + ' icon'}>{feature.icon}</div>
-          <h3 class="text-xl font-bold text-gray-900">{feature.title}</h3>
-          <p class="mt-4 text-gray-600">{feature.description}</p>
+        <div class="relative overflow-hidden rounded-3xl border border-slate-100 bg-white/80 p-8 shadow-[0_20px_60px_-30px_rgba(15,23,42,0.4)] transition hover:-translate-y-1 hover:border-slate-200">
+          <div class="flex h-12 w-12 items-center justify-center rounded-2xl bg-slate-900 text-2xl text-white" role="img" aria-label={feature.title + ' icon'}>
+            {feature.icon}
+          </div>
+          <h3 class="mt-6 text-2xl font-semibold text-slate-900">{feature.title}</h3>
+          <p class="mt-3 text-base text-slate-600">{feature.description}</p>
         </div>
       ))}
     </div>

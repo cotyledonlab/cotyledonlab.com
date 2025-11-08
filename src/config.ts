@@ -1,10 +1,10 @@
 export const SITE_CONFIG = {
   title: 'Cotyledon Lab',
-  description: 'Innovative solutions for modern businesses. We help companies grow and thrive in the digital age.',
+  description: 'A product studio building bespoke web and mobile apps, from proof of concept to production launches.',
   url: 'https://cotyledonlab.com',
   image: '/social-image.jpg',
   author: 'Cotyledon Lab Team',
   email: 'hello@cotyledonlab.com',
   twitter: '@cotyledonlab',
-  keywords: 'business, consulting, digital transformation, innovation',
+  keywords: 'app development, product studio, web apps, mobile apps, UI/UX design, startups',
 } as const;
