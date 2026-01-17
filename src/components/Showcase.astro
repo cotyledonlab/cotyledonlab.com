@@ -9,25 +9,18 @@ type ShowcaseItem = {
 
 const showcase: ShowcaseItem[] = [
   {
+    title: 'VoxShop',
+    summary: 'Voice-first shopping list app. Add items hands-free while cooking or on the go.',
+    stack: 'React · Vite · Web Speech API',
+    link: '/demos/voxshop',
+    badge: 'Live Demo',
+  },
+  {
     title: 'Meal Planner Copilot',
     summary: 'AI-assisted nutrition planning tool that generates menus, groceries, and macros in seconds.',
     stack: 'Next.js · OpenAI · Supabase',
     link: '/demos/meal-planner',
     badge: 'Live Demo',
-  },
-  {
-    title: 'Investor Reporting Console',
-    summary: 'Portfolio analytics app that automates fund updates and secure LP communications.',
-    stack: 'Remix · Postgres · AWS',
-    link: 'https://demo.cotyledonlab.com/investor-console',
-    badge: 'Prototype',
-  },
-  {
-    title: 'Field Ops Companion',
-    summary: 'Offline-first tablet experience for technicians syncing diagnostics from remote sites.',
-    stack: 'React Native · Realm · Cloudflare Workers',
-    link: 'https://demo.cotyledonlab.com/field-ops',
-    badge: 'Concept',
   },
 ];
 ---
@@ -39,14 +32,14 @@ const showcase: ShowcaseItem[] = [
         <p class="text-sm font-semibold uppercase tracking-[0.4em] text-white/50">Showcase</p>
         <h2 class="mt-4 text-4xl font-semibold sm:text-5xl">Working demos from the lab</h2>
         <p class="mt-4 max-w-2xl text-lg text-white/70">
-          We keep a rotating gallery of internal builds and client-approved demos. Explore real product flows and spark ideas for your own roadmap.
+          Side projects and experiments I'm building in public. Try them out and let me know what you think.
         </p>
       </div>
       <a
         href="#contact"
         class="inline-flex items-center justify-center rounded-2xl border border-white/20 px-5 py-3 text-sm font-semibold uppercase tracking-[0.3em] text-white/80 transition hover:border-white hover:text-white"
       >
-        Request a tailored walkthrough
+        Have a project idea? Let's chat
       </a>
     </div>
 

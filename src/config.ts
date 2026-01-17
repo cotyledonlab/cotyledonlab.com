@@ -1,10 +1,10 @@
 export const SITE_CONFIG = {
   title: 'Cotyledon Lab',
-  description: 'A product studio building bespoke web and mobile apps, from proof of concept to production launches.',
+  description: 'Indie dev studio building web and mobile apps. Side projects, experiments, and client work.',
   url: 'https://cotyledonlab.com',
   image: '/social-image.jpg',
-  author: 'Cotyledon Lab Team',
+  author: 'John Maher',
   email: 'hello@cotyledonlab.com',
   twitter: '@cotyledonlab',
-  keywords: 'app development, product studio, web apps, mobile apps, UI/UX design, startups',
+  keywords: 'indie developer, freelance, web apps, mobile apps, react, full-stack',
 } as const;
